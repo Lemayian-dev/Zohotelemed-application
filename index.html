@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Telemed Application</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navigation_links">
+        <img
+          src="images/Medical-health-logo-design-on-transparent-background-PNG-removebg-preview.png"
+          alt="Logo"
+        />
+        <button class="hamburger-menu">
+          <img src="images/icons8-hamburger-48.png" alt="" />
+        </button>
+        <ul class="nav-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#our-services">Our services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="consultation">Book consultation</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <!-- tablet medicine -->
+        <img
+          class="tablet-1"
+          src="images/business-3d-white-purple-capsule.png"
+          alt="Tablet 1"
+        />
+        <img
+          class="tablet-2"
+          src="images/casual-life-3d-white-pink-capsule-1.png"
+          alt="Tablet 2"
+        />
+        <div class="herotextdesc">
+          <h1>
+            Welcome to Zohomed <br />
+            Your <span>Virtual Health</span> Companion
+          </h1>
+          <p>
+            Access quality healthcare from the comfort of your home. Connect
+            with certified doctors, manage your health records, and receive
+            personalized care without leaving your house.
+          </p>
+          <div class="hero-btn">
+            <button class="btn-1">Book consultation</button>
+            <button class="btn-2">Contact us</button>
+          </div>
+        </div>
+        <img
+          class="doctor-image"
+          src="images/pngtree-young-afro-professional-doctor-png-image_13227671-removebg-preview.png"
+          alt="Doctor"
+        />
+      </section>
+
+      <section id="how-it-works" class="info-section how-it-works">
+        <h2>How It Works</h2>
+        <p>
+          Our telemedicine platform is designed to make healthcare easy and
+          accessible. Here's how it works:
+        </p>
+        <ol>
+          <li>Sign up and create an account.</li>
+          <li>Browse available doctors and book a consultation.</li>
+          <li>Connect with your doctor via video call or chat.</li>
+          <li>Manage your health records and follow up on treatments.</li>
+        </ol>
+      </section>
+
+      <section id="our-services" class="info-section our-services">
+        <h2>Our Services</h2>
+        <div class="service-list">
+          <div class="service-item">
+            <h3>Virtual Consultations</h3>
+            <p>Consult with certified doctors from the comfort of your home.</p>
+          </div>
+          <div class="service-item">
+            <h3>Health Records Management</h3>
+            <p>Keep track of your health records and medical history.</p>
+          </div>
+          <div class="service-item">
+            <h3>Personalized Care Plans</h3>
+            <p>Receive customized care plans tailored to your needs.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="info-section contact">
+        <h2>Contact Us</h2>
+        <p>
+          If you have any questions or need assistance, feel free to reach out
+          to us:
+        </p>
+        <form class="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="main-footer">
+        <div class="footer-logo">
+          <img
+            src="images/Medical-health-logo-design-on-transparent-background-PNG-removebg-preview.png"
+            alt="Footer Logo"
+          />
+          <p>
+            At Zohotelemed, we believe <br />
+            in making healthcare accessible <br />
+            and convenient for everyone.
+          </p>
+        </div>
+
+        <!-- footer navigation -->
+        <div class="footer-nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#how-it-works">How it works</a></li>
+            <li><a href="#our-services">Our services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- social icons -->
+        <div class="footer-social">
+          <img src="images/icons8-instagram-64.png" alt="Instagram" />
+          <img src="images/icons8-twitter-50.png" alt="Twitter" />
+          <img src="images/icons8-linkedin-64.png" alt="LinkedIn" />
+        </div>
+      </div>
+
+      <div class="Copywrite">
+        <h2>Copyright @2024 Telemed</h2>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburgerMenu = document.querySelector(".hamburger-menu");
+        const navList = document.querySelector(".nav-list");
+
+        hamburgerMenu.addEventListener("click", function () {
+          navList.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>

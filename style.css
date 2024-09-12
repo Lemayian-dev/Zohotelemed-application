@@ -1,0 +1,669 @@
+@import url('https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #1982ff;
+    --secondary-color: #9cdc2c;
+    --text-color: #181818;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+.navigation_links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.navigation_links img {
+    height: 50px;
+}
+
+.hamburger-menu {
+    z-index: 1000;
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--primary-color);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.hamburger-menu img {
+    width: 30px;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-list li {
+    margin: 0 10px;
+}
+
+.nav-list a {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: #3498db;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: "Schibsted Grotesk", sans-serif;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    position: relative;
+}
+
+.herotextdesc {
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.herotextdesc span {
+    color: var(--primary-color);
+}
+
+.hero-section h1 {
+    font-family: "Schibsted Grotesk", sans-serif;
+    font-size: 40px;
+}
+
+.hero-section p {
+    padding-top: 20px;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero-btn {
+    margin-top: 35px;
+    display: flex;
+    gap: 15px;
+}
+
+.hero-btn .btn-1,
+.hero-btn .btn-2 {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Schibsted Grotesk', sans-serif;
+    font-size: 15px;
+}
+
+.hero-btn .btn-1:hover {
+    background-color: var(--secondary-color);
+}
+
+.hero-btn .btn-2 {
+    background-color: var(--secondary-color);
+    width: 150px;
+    height: 40px;
+}
+
+.hero-btn .btn-2:hover {
+    background-color: var(--primary-color);
+}
+
+.doctor-image {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.tablet-1,
+.tablet-2 {
+    position: absolute;
+    width: 100px;
+}
+
+.tablet-1 {
+    top: 100px;
+    left: 40px;
+    z-index: -1;
+}
+
+.tablet-2 {
+    bottom: 100px;
+    right: 40px;
+}
+
+.how-it-works,
+.our-services,
+.contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.how-it-works {
+    background-color: #f9f9f9;
+}
+
+.how-it-works h2 {
+    font-family: 'Schibsted Grotesk', sans-serif;
+    font-size: 36px;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.how-it-works p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.how-it-works ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: step;
+}
+
+.how-it-works li {
+    position: relative;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #333;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.how-it-works li:hover {
+    background-color: #eaf0ff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.how-it-works li::before {
+    content: counter(step) ". ";
+    counter-increment: step;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Schibsted Grotesk', sans-serif;
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+.our-services {
+    background-color: #fff;
+}
+
+.our-services h2 {
+    font-family: 'Schibsted Grotesk', sans-serif;
+    font-size: 36px;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-item h3 {
+    font-family: 'Schibsted Grotesk', sans-serif;
+    font-size: 24px;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #666;
+}
+
+.info-section.contact {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    text-align: left;
+    width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Schibsted Grotesk', sans-serif;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    background-color: #95bef0;
+}
+
+.main-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+.footer-logo img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.footer-nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px;
+}
+
+.footer-nav a {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+    color: #3498db;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 15px;
+}
+
+.footer-social img {
+    width: 40px;
+    height: auto;
+    transition: opacity 0.3s;
+}
+
+.footer-social img:hover {
+    opacity: 0.7;
+}
+
+.Copywrite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsive Styles Continued */
+/* Responsive Styles Continued */
+@media (max-width: 768px) {
+    /* Hide consultation button on tablets and mobile devices */
+    .consultation {
+        display: none;
+    }
+
+    .navigation_links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #f4f4f4;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    /* Additional styles for header, hero section, etc. */
+    header {
+        padding: 10px 15px;
+    }
+
+    .navigation_links img {
+        height: 40px;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .hero-section h1 {
+        font-size: 32px;
+    }
+
+    .hero-section p {
+        font-size: 16px;
+    }
+
+    .hero-btn .btn-1,
+    .hero-btn .btn-2 {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .doctor-image {
+        max-width: 300px;
+    }
+
+    .tablet-1,
+    .tablet-2 {
+        width: 80px;
+    }
+
+    .tablet-1 {
+        top: 80px;
+        left: 20px;
+    }
+
+    .tablet-2 {
+        bottom: 80px;
+        right: 20px;
+    }
+
+    .how-it-works h2,
+    .our-services h2 {
+        font-size: 28px;
+    }
+
+    .how-it-works p {
+        font-size: 16px;
+    }
+
+    .service-item {
+        max-width: 90%;
+        margin: 10px 0;
+    }
+
+    .contact-form {
+        padding: 15px;
+    }
+
+    .contact-form label,
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+    }
+
+    .contact-form button {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    footer {
+        height: auto;
+        padding: 15px;
+    }
+
+    .main-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo img {
+        width: 50px;
+    }
+
+    .footer-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-social img {
+        width: 35px;
+    }
+
+    .Copywrite {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Hide consultation button on mobile devices */
+    .consultation {
+        display: none;
+    }
+
+    header {
+        padding: 10px 10px;
+    }
+
+    .navigation_links img {
+        height: 35px;
+    }
+
+    .hamburger-menu img {
+        width: 25px;
+    }
+
+    .hero-section h1 {
+        font-size: 28px;
+    }
+
+    .hero-section p {
+        font-size: 14px;
+    }
+
+    .hero-btn .btn-1,
+    .hero-btn .btn-2 {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .doctor-image {
+        max-width: 250px;
+    }
+
+    .tablet-1,
+    .tablet-2 {
+        width: 60px;
+    }
+
+    .tablet-1 {
+        top: 60px;
+        left: 10px;
+    }
+
+    .tablet-2 {
+        bottom: 60px;
+        right: 10px;
+    }
+
+    .how-it-works h2,
+    .our-services h2 {
+        font-size: 24px;
+    }
+
+    .how-it-works p {
+        font-size: 14px;
+    }
+
+    .service-item {
+        max-width: 100%;
+        margin: 5px 0;
+    }
+
+    .contact-form {
+        padding: 10px;
+    }
+
+    .contact-form label,
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 12px;
+    }
+
+    .contact-form button {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    .footer-logo img {
+        width: 40px;
+    }
+
+    .footer-nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .footer-social img {
+        width: 30px;
+    }
+
+    .Copywrite {
+        font-size: 12px;
+    }
+}
